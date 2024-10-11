@@ -1,16 +1,17 @@
-#include <stdio.h> // Biblioteca padrão de entrada e saída
+#include <stdio.h>
 
-int main()
-{
-    int x = 10;
+int main() {
+    int numero;
 
-    if (x > 5)
-    {
-        printf("x é maior que 5\n");
-    }
-    else
-    {
-        printf("x é menor ou igual a 5\n");
+    // Solicita um número ao usuário
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+
+    // Verifica se o número é par ou ímpar
+    if (numero % 2 == 0) {
+        printf("O número %d é par.\n", numero);
+    } else {
+        printf("O número %d é ímpar.\n", numero);
     }
 
     return 0;
