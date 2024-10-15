@@ -1,22 +1,26 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
+    int numero, i, primo = 1;
 
-    int nota = 85;
+    printf("Digite um número inteiro: ");
+    scanf("%d", &numero);
 
-    if (nota >= 90)
-    {
-        printf("Nota A\n");
+    if (numero <= 1) {
+        primo = 0;
+    } else {
+        for (i = 2; i <= numero / 2; i++) {
+            if (numero % i == 0) {
+                primo = 0;
+                break;
+            }
+        }
     }
-    else if (nota >= 80)
-    {
-        printf("Nota B\n");
-    }
+
+    if (primo)
+        printf("%d é um número primo.\n", numero);
     else
-    {
-        printf("Nota C\n");
-    }
-    
+        printf("%d não é um número primo.\n", numero);
+
     return 0;
 }
