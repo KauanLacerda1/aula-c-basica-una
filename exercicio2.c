@@ -1,17 +1,16 @@
-#include <stdio.h> // Biblioteca padrão de entrada e saída
+#include <stdio.h>
 
-int main()
-{
-    int x = 10;
+int main() {
+    int N, soma = 0;
 
-    if (x > 5)
-    {
-        printf("x é maior que 5\n");
+    printf("Digite um número inteiro N: ");
+    scanf("%d", &N);
+
+    for (int i = 1; i <= N; i++) {
+        soma += i;
     }
-    else
-    {
-        printf("x é menor ou igual a 5\n");
-    }
+
+    printf("A soma de 1 a %d é: %d\n", N, soma);
 
     return 0;
 }
